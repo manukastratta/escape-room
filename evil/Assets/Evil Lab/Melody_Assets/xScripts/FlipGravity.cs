@@ -29,20 +29,22 @@ public class FlipGravity : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         if (player != null)
         {
-            StartCoroutine(RotateImage());
+            StartCoroutine(RotateImage(player));
         }
 
-        IEnumerator RotateImage()
+
+    }
+
+    IEnumerator RotateImage(GameObject player)
+    {
+        float moveSpeed = 0.007f;
+        float x = 180;
+        while (player.transform.rotation.x < 180)
         {
-            float moveSpeed = 0.007f;
-            float x = 180;
-            while (player.transform.rotation.x < 180)
-            {
-                player.transform.rotation = Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(180, 0, 0), moveSpeed * Time.time);
-                yield return null;
-            }
-            player.transform.rotation = Quaternion.Euler(180, 0, 0);
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(180, 0, 0), moveSpeed * Time.time);
             yield return null;
         }
+        player.transform.rotation = Quaternion.Euler(180, 0, 0);
+        yield return null;
     }
 }

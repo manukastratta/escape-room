@@ -326,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1895556547, guid: 31776894e2920421f86193b828858590, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0692987
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 1895556547, guid: 31776894e2920421f86193b828858590, type: 3}
       propertyPath: m_LocalPosition.y
@@ -334,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1895556547, guid: 31776894e2920421f86193b828858590, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0066329837
+      value: 0.049
       objectReference: {fileID: 0}
     - target: {fileID: 1895556547, guid: 31776894e2920421f86193b828858590, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4927,7 +4927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   black: {r: 0, g: 0, b: 0, a: 1}
-  waitTime: 10
+  waitTime: 25
 --- !u!1001 &879889900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4941,7 +4941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 218718053, guid: d13822e12e1e84c62a85b4fef5778615, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1322985
+      value: -0.936
       objectReference: {fileID: 0}
     - target: {fileID: 218718053, guid: d13822e12e1e84c62a85b4fef5778615, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5466,7 +5466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   black: {r: 0, g: 0, b: 0, a: 1}
-  waitTime: 8
+  waitTime: 20
 --- !u!1001 &977213956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6085,11 +6085,38 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7487688747927988619, guid: 5298904bfcc37064db489ce758ac4398,
+        type: 3}
+      propertyPath: m_modelGearVrController
+      value: 
+      objectReference: {fileID: 1116812931}
+    - target: {fileID: 7487688747927988619, guid: 5298904bfcc37064db489ce758ac4398,
+        type: 3}
+      propertyPath: m_controller
+      value: 33554432
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827301554490832788, guid: 5298904bfcc37064db489ce758ac4398,
+        type: 3}
+      propertyPath: oculusGoRemote
+      value: 
+      objectReference: {fileID: 1116812930}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5298904bfcc37064db489ce758ac4398, type: 3}
 --- !u!4 &1116812929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1858363403748114662, guid: 5298904bfcc37064db489ce758ac4398,
+    type: 3}
+  m_PrefabInstance: {fileID: 1116812928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1116812930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7384876614220460635, guid: 5298904bfcc37064db489ce758ac4398,
+    type: 3}
+  m_PrefabInstance: {fileID: 1116812928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1116812931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7384555081161491637, guid: 5298904bfcc37064db489ce758ac4398,
     type: 3}
   m_PrefabInstance: {fileID: 1116812928}
   m_PrefabAsset: {fileID: 0}
@@ -8998,7 +9025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   black: {r: 0, g: 0, b: 0, a: 1}
-  waitTime: 2
+  waitTime: 5
 --- !u!1001 &1575251301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11069,7 +11096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   black: {r: 0, g: 0, b: 0, a: 1}
-  waitTime: 4
+  waitTime: 10
 --- !u!1001 &1971510746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11380,7 +11407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   black: {r: 0, g: 0, b: 0, a: 1}
-  waitTime: 6
+  waitTime: 15
 --- !u!1001 &2062507111
 PrefabInstance:
   m_ObjectHideFlags: 0

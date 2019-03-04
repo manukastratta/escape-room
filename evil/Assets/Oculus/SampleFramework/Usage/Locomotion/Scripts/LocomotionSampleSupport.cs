@@ -172,7 +172,7 @@ public class LocomotionSampleSupport : MonoBehaviour
     {
         TeleportController.enabled = true;
         lc.PlayerController.SnapRotation = true;
-        lc.PlayerController.RotationEitherThumbstick = false;
+//        lc.PlayerController.RotationEitherThumbstick = false;
         lc.PlayerController.FixedSpeedSteps = 0;
         TeleportController.EnableMovement(false, false, false, false);
         TeleportController.EnableRotation(false, false, false, false);
@@ -208,7 +208,7 @@ public class LocomotionSampleSupport : MonoBehaviour
         SetupNonCap();
         lc.PlayerController.SnapRotation = true;
         lc.PlayerController.FixedSpeedSteps = 1;
-        lc.PlayerController.RotationEitherThumbstick = true;
+//        lc.PlayerController.RotationEitherThumbstick = true;
         TeleportController.EnableRotation(true, false, false, true);
         ActivateHandlers<TeleportInputHandlerAvatarTouch, TeleportAimHandlerLaser, TeleportTargetHandlerNode, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
         var input = TeleportController.GetComponent<TeleportInputHandlerAvatarTouch>();
@@ -225,7 +225,7 @@ public class LocomotionSampleSupport : MonoBehaviour
         TeleportController.EnableRotation(true, false, false, true);
         TeleportController.EnableMovement(false, false, false, false);
         lc.PlayerController.SnapRotation = true;
-        lc.PlayerController.RotationEitherThumbstick = true;
+//        lc.PlayerController.RotationEitherThumbstick = true;
         lc.PlayerController.FixedSpeedSteps = 1;
 
         var input = TeleportController.GetComponent<TeleportInputHandlerAvatarTouch>();
@@ -262,7 +262,7 @@ public class LocomotionSampleSupport : MonoBehaviour
         TeleportController.enabled = false;
         lc.PlayerController.EnableLinearMovement = true;
         lc.PlayerController.SnapRotation = true;
-        lc.PlayerController.RotationEitherThumbstick = false;
+//        lc.PlayerController.RotationEitherThumbstick = false;
         lc.PlayerController.FixedSpeedSteps = 1;
     }
 

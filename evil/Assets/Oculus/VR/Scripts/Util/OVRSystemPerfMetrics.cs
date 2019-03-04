@@ -253,21 +253,21 @@ public class OVRSystemPerfMetrics
 			metrics.systemCpuUtilWorstPercentage_IsValid = floatValue.HasValue;
 			metrics.systemCpuUtilWorstPercentage = floatValue.GetValueOrDefault();
 
-			floatValue = OVRPlugin.GetPerfMetricsFloat(OVRPlugin.PerfMetrics.Device_CpuClockFrequencyInMHz_Float);
-			metrics.deviceCpuClockFrequencyInMHz_IsValid = floatValue.HasValue;
-			metrics.deviceCpuClockFrequencyInMHz = floatValue.GetValueOrDefault();
+			//floatValue = OVRPlugin.GetPerfMetricsFloat(OVRPlugin.PerfMetrics.Device_CpuClockFrequencyInMHz_Float);
+			//metrics.deviceCpuClockFrequencyInMHz_IsValid = floatValue.HasValue;
+			//metrics.deviceCpuClockFrequencyInMHz = floatValue.GetValueOrDefault();
 
-			floatValue = OVRPlugin.GetPerfMetricsFloat(OVRPlugin.PerfMetrics.Device_GpuClockFrequencyInMHz_Float);
-			metrics.deviceGpuClockFrequencyInMHz_IsValid = floatValue.HasValue;
-			metrics.deviceGpuClockFrequencyInMHz = floatValue.GetValueOrDefault();
+			//floatValue = OVRPlugin.GetPerfMetricsFloat(OVRPlugin.PerfMetrics.Device_GpuClockFrequencyInMHz_Float);
+			//metrics.deviceGpuClockFrequencyInMHz_IsValid = floatValue.HasValue;
+			//metrics.deviceGpuClockFrequencyInMHz = floatValue.GetValueOrDefault();
 
-			intValue = OVRPlugin.GetPerfMetricsInt(OVRPlugin.PerfMetrics.Device_CpuClockLevel_Int);
-			metrics.deviceCpuClockLevel_IsValid = intValue.HasValue;
-			metrics.deviceCpuClockLevel = intValue.GetValueOrDefault();
+			//intValue = OVRPlugin.GetPerfMetricsInt(OVRPlugin.PerfMetrics.Device_CpuClockLevel_Int);
+			//metrics.deviceCpuClockLevel_IsValid = intValue.HasValue;
+			//metrics.deviceCpuClockLevel = intValue.GetValueOrDefault();
 
-			intValue = OVRPlugin.GetPerfMetricsInt(OVRPlugin.PerfMetrics.Device_GpuClockLevel_Int);
-			metrics.deviceGpuClockLevel_IsValid = intValue.HasValue;
-			metrics.deviceGpuClockLevel = intValue.GetValueOrDefault();
+			//intValue = OVRPlugin.GetPerfMetricsInt(OVRPlugin.PerfMetrics.Device_GpuClockLevel_Int);
+			//metrics.deviceGpuClockLevel_IsValid = intValue.HasValue;
+			//metrics.deviceGpuClockLevel = intValue.GetValueOrDefault();
 
 			return metrics;
 		}
