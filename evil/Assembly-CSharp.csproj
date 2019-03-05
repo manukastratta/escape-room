@@ -76,6 +76,7 @@
     <Compile Include="Assets\Evil Lab\Manuka_Assets\xScripts\flaskTriggerS.cs" />
     <Compile Include="Assets\Evil Lab\Manuka_Assets\xScripts\moveFlasksS.cs" />
     <Compile Include="Assets\Evil Lab\Manuka_Assets\xScripts\puzzleManagerS.cs" />
+    <Compile Include="Assets\Evil Lab\Manuka_Assets\xScripts\startChallengeS.cs" />
     <Compile Include="Assets\Evil Lab\Manuka_Assets\xScripts\timerS.cs" />
     <Compile Include="Assets\Evil Lab\Manuka_Assets\xScripts\TouchFlask.cs" />
     <Compile Include="Assets\Evil Lab\Melody_Assets\xScripts\BoxInstantiator.cs" />
