@@ -31,7 +31,7 @@ public class destroyFlasksS : MonoBehaviour
         //GetComponent(MeshRenderer).enabled = false;
         while (true)
         {
-            if(counter>=100*1000000)
+            if (counter >= 100 * 1000000)
             {
                 Destroy(this.gameObject);
                 break;
@@ -80,33 +80,6 @@ public class destroyFlasksS : MonoBehaviour
         flaskPuzzleManager.Instance.removeFlaskFromList(this.gameObject);
         flaskPuzzleManager.Instance.numFlasksDestroyed++;
     }
-
-    //public void destroyWhiteFlask()
-    //{
-    //    wAudioSource.PlayOneShot(wSoundAudio);
-    //}
-
-    //public void destroyGrayFlask()
-    //{
-    //    gAudioSource.PlayOneShot(gSoundAudio);
-    //}
-
-    //public void destroyBlackFlask()
-    //{
-    //    bAudioSource.PlayOneShot(bSoundAudio);
-    //}
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    audioSource.PlayOneShot(glassAudio);
-
-    //    Destroy(other.gameObject);
-    //    //other.gameObject.SetActive(false);
-    //}
-    //public void OnTriggerEnter(Collider other)
-    //{
-    //    //currFlask.SetActive(false);
-    //}
 
 
 }

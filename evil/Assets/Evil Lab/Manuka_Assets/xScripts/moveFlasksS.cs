@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class moveFlasksS : MonoBehaviour
 {
+    public static moveFlasksS Instance;
+    private float numSeconds = 2;
+
     [SerializeField]
     public GameObject[] spawnees;
 
@@ -14,27 +17,35 @@ public class moveFlasksS : MonoBehaviour
     [SerializeField]
     public Transform spawnPosB;
 
-    private void Start()
+
+    public void startGame()
     {
-        //Vector3 initialPos = wSmallFlask.transform.position;
-
-        //oriX = initialPos[0];
-        //oriY = initialPos[1];
-        //oriZ = initialPos[2];
-
         StartCoroutine(spawnNewFlask());
+    }
+
+    public void stopGame()
+    {
+        StopCoroutine(spawnNewFlask());
+        flaskPuzzleManager.Instance.gameOver = true;
+    }
+
+    public void Awake()
+    {
+        Instance = this;
     }
 
     /*
      * Instantiates either a white, gray or black falling flask
      * every 2 seconds.    
-     */ 
+     */
     IEnumerator spawnNewFlask()
     {
-        while (!flaskPuzzleManager.Instance.gameOver && flaskPuzzleManager.Instance.numFlasksBroken < 5)
+
+        while (!flaskPuzzleManager.Instance.gameOver && 
+        flaskPuzzleManager.Instance.numFlasksBroken <= flaskPuzzleManager.Instance.maxLives)
         {
-            yield return new WaitForSeconds(2);
-            if(flaskPuzzleManager.Instance.numFlasksBroken < 5)
+            yield return new WaitForSeconds(numSeconds);
+            if (flaskPuzzleManager.Instance.numFlasksBroken <= flaskPuzzleManager.Instance.maxLives)
             {
                 GameObject element;
                 int randomNum = Random.Range(0, 3);
@@ -44,7 +55,7 @@ public class moveFlasksS : MonoBehaviour
                     element = Instantiate(spawnees[0], spawnPosW.position, spawnPosW.rotation);
                 }
                 else if (randomNum == 1)
-                {   
+                {
                     element = Instantiate(spawnees[1], spawnPosG.position, spawnPosG.rotation);
                 }
                 else
@@ -53,21 +64,26 @@ public class moveFlasksS : MonoBehaviour
 
                 }
                 flaskPuzzleManager.Instance.addFlaskToList(element);
+                if (numSeconds >= 0.9f) // cannot go lower than 0.5 seconds
+                {
+                    numSeconds -= 0.01f;
+                    //moveEachFlaskS.Instance.incrementSpeed();
+                }
             }
 
         }
 
     }
 
-
-    void Update()
+    public void resetValues()
     {
-    
-        //if(Input.GetMouseButton(0)) // on click
-        //{
-        //    spawnNewFlask();
-        //}
+        numSeconds = 2;
+        //moveEachFlaskS.Instance.resetSpeed();
     }
 
 
+    //if(Input.GetMouseButton(0)) // on click
+    //{
+    //    spawnNewFlask();
+    //}
 }
