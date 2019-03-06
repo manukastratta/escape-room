@@ -42,19 +42,19 @@ namespace RHL.Scripts.Common
         void Update()
         {
             // Rotates the controller anchor (TrackedRemote) based on arrow keys
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.UpArrow))
             {
                 controller.Rotate(new Vector3(-1f, 0f, 0f), Space.Self);
             }
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.DownArrow))
             {
                 controller.Rotate(new Vector3(1f, 0f, 0f), Space.Self);
             }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
                 controller.Rotate(new Vector3(0f, -1f, 0f), Space.World);
             }
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
                 controller.Rotate(new Vector3(0f, 1f, 0f), Space.World);
             }
